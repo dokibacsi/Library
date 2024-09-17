@@ -19,12 +19,13 @@ return new class extends Migration
             $table->integer("pieces");
             $table->timestamps();
         });
+        $book = Book::factory()->count(1000)->create();
 
-        Book::create(["author" => "Daniel Stevenson", 'title' => 'WAU WAU WAU WAU', 'pieces' => 6000]);
+        /* Book::create(["author" => "Daniel Stevenson", 'title' => 'WAU WAU WAU WAU', 'pieces' => 6000]);
         Book::create(["author" => "Hayden DeMark", 'title' => 'WTF moment', 'pieces' => 4500]);
         Book::create(["author" => "William Sharp", 'title' => 'nerdHUB', 'pieces' => 4500]);
         Book::create(["author" => "William Sharp", 'title' => 'TimeStamp', 'pieces' => 5500]);
-        Book::create(["author" => "George Black", 'title' => 'LaravelIsTheShit', 'pieces' => 5500]);
+        Book::create(["author" => "George Black", 'title' => 'LaravelIsTheShit', 'pieces' => 5500]); */
     }
 
     /**

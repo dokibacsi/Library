@@ -19,11 +19,13 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        Copy::create(['book_id' => 3, 'user_id' => 2]);
+        $copies = Copy::factory()->count(1000)->create();
+
+        /* Copy::create(['book_id' => 3, 'user_id' => 2]);
         Copy::create(['book_id' => 1, 'user_id' => 5]);
         Copy::create(['book_id' => 2, 'user_id' => 1]);
         Copy::create(['book_id' => 5, 'user_id' => 2]);
-        Copy::create(['book_id' => 4, 'user_id' => 4]);
+        Copy::create(['book_id' => 4, 'user_id' => 4]); */
     }
 
     /**

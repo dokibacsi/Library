@@ -20,12 +20,13 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
-
-        User::create(['name' => 'Dani', 'email' => 'danialegjobb@zoomail.eu']);
+        
+        $users = User::factory()->count(1000)->create();
+        /* User::create(['name' => 'Dani', 'email' => 'danialegjobb@zoomail.eu']);
         User::create(['name' => 'Valentin', 'email' => 'valent@zoomail.eu']);
         User::create(['name' => 'Gery', 'email' => 'magasgeri@zoomail.eu']);
         User::create(['name' => 'I', 'email' => 'imintflower@zoomail.eu']);
-        User::create(['name' => 'Ádám', 'email' => 'bledyakiraly@zoomail.eu']);
+        User::create(['name' => 'Ádám', 'email' => 'bledyakiraly@zoomail.eu']); */
     }
 
     /**
