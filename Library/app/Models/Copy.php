@@ -12,4 +12,6 @@ class Copy extends Model
         'book_id',
         'user_id',
     ];
+
+    
 }
